@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>K-Fitness Club | Premium Fitness Center in Casablanca</title>
+<meta name="description" content="K-Fitness Club – Modern fitness center in Sidi Maarouf, Casablanca. Premium equipment, professional coaches, affordable memberships. Start your transformation today.">
+<meta name="keywords" content="K-Fitness, gym Casablanca, fitness Sidi Maarouf, gym Morocco, personal trainer Casablanca">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="K-Fitness Club | Transform Your Body. Elevate Your Life.">
+<meta property="og:description" content="Modern Fitness Center in Sidi Maarouf with Premium Equipment, Professional Coaches and Affordable Membership Plans.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://k-fitness.ma">
+<meta property="og:image" content="images/gym-1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="K-Fitness Club | Transform Your Body. Elevate Your Life.">
+<meta name="twitter:description" content="Modern Fitness Center in Sidi Maarouf with Premium Equipment, Professional Coaches and Affordable Membership Plans.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+:root {
+  --orange: #ff6b00;
+  --orange-hover: #e65f00;
+  --orange-light: rgba(255, 107, 0, 0.1);
+  --orange-glow: rgba(255, 107, 0, 0.3);
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #111111;
+  --bg-card: #1a1a1a;
+  --bg-elevated: #222222;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --text-muted: #666666;
+  --border-color: #2a2a2a;
+  --shadow: 0 4px 20px rgba(0,0,0,0.3);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.5);
+  --nav-bg: rgba(10, 10, 10, 0.95);
+}
+
+[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f8f8;
+  --bg-card: #ffffff;
+  --bg-elevated: #f0f0f0;
+  --text-primary: #0a0a0a;
+  --text-secondary: #555555;
+  --text-muted: #999999;
+  --border-color: #e0e0e0;
+  --shadow: 0 4px 20px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+  --nav-bg: rgba(255, 255, 255, 0.95);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background var(--transition-base), color var(--transition-base);
+  overflow-x: hidden;
+}
+
+.rtl { direction: rtl; }
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-color);
+  transition: all var(--transition-base);
+}
+
+.header-scrolled { box-shadow: var(--shadow-lg); }
+
+/* Buttons */
+.btn-primary {
+  background: var(--orange);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all var(--transition-base);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: var(--orange-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--orange-glow);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  padding: 14px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all var(--transition-base);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+  transform: translateY(-2px);
+}
+
+.btn-small {
+  padding: 10px 24px;
+  font-size: 13px;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: all var(--transition-base);
+}
+
+.theme-toggle:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+/* Language Switcher */
+.lang-btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all var(--transition-base);
+  font-family: 'Inter', sans-serif;
+}
+
+.lang-btn:hover { color: var(--text-primary); }
+
+.lang-btn.active {
+  background: var(--orange-light);
+  color: var(--orange);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100vh;
+  background: var(--bg-card);
+  z-index: 999;
+  padding: 80px 24px 24px;
+  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-left: 1px solid var(--border-color);
+}
+
+.mobile-menu.open { right: 0; }
+
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
+}
+
+.mobile-overlay.open { opacity: 1; pointer-events: all; }
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.7) 100%);
+  z-index: 1;
+}
+
+[data-theme="light"] .hero-overlay {
+  background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.6) 100%);
+}
+
+.hero-content { position: relative; z-index: 2; width: 100%; }
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 107, 0, 0.15);
+  color: var(--orange);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 107, 0, 0.2);
+}
+
+.hero h1 {
+  font-size: clamp(48px, 8vw, 88px);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+}
+
+.hero h1 .highlight {
+  background: linear-gradient(135deg, var(--orange) 0%, #ff8c38 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: clamp(16px, 2vw, 20px);
+  color: rgba(255,255,255,0.7);
+  max-width: 560px;
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+/* Stats Bar */
+.stats-bar {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px 32px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 60px;
+}
+
+.stat-item {
+  text-align: center;
+  border-right: 1px solid var(--border-color);
+  padding: 0 16px;
+}
+
+.stat-item:last-child { border-right: none; }
+
+.stat-number {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--orange);
+}
+
+.stat-label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* Section styles */
+.section { padding: 100px 0; }
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--orange);
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 600px;
+}
+
+/* Cards */
+.feature-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 32px;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition-base);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 107, 0, 0.3);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+}
+
+.feature-card:hover::before { transform: scaleX(1); }
+
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: var(--orange-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--orange);
+}
+
+.feature-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Pricing */
+.pricing-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 40px 32px;
+  text-align: center;
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.pricing-card.featured {
+  border-color: var(--orange);
+  transform: scale(1.05);
+  box-shadow: 0 20px 60px rgba(255, 107, 0, 0.15);
+}
+
+.pricing-card.featured .btn-primary {
+  background: var(--orange);
+  box-shadow: 0 8px 25px var(--orange-glow);
+}
+
+.pricing-card:hover { transform: translateY(-8px); }
+
+.pricing-card.featured:hover { transform: scale(1.05) translateY(-8px); }
+
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--orange);
+  color: #fff;
+  padding: 6px 20px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pricing-name {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.pricing-price {
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.pricing-price .currency { font-size: 24px; }
+
+.pricing-duration {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.pricing-divider {
+  height: 1px;
+  background: var(--border-color);
+  margin: 24px 0;
+}
+
+.pricing-features { list-style: none; margin-bottom: 32px; }
+
+.pricing-features li {
+  padding: 8px 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.pricing-features li::before {
+  content: '✓';
+  color: var(--orange);
+  font-weight: 700;
+}
+
+/* Coach Cards */
+.coach-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.coach-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+}
+
+.coach-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.coach-info { padding: 20px 24px 24px; }
+
+.coach-info h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.coach-info p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* Testimonials */
+.testimonial-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 28px;
+  transition: all var(--transition-base);
+}
+
+.testimonial-card:hover {
+  border-color: rgba(255, 107, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.testimonial-stars {
+  color: #ffb800;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.testimonial-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 1;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover img { transform: scale(1.08); }
+
+.gallery-item.tall { grid-row: span 2; }
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+
+.gallery-overlay span {
+  color: #fff;
+  font-size: 24px;
+  transform: scale(0.8);
+  transition: transform var(--transition-base);
+}
+
+.gallery-item:hover .gallery-overlay span { transform: scale(1); }
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
+}
+
+.lightbox.open { opacity: 1; pointer-events: all; }
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  transform: scale(0.9);
+  transition: transform var(--transition-base);
+}
+
+.lightbox.open img { transform: scale(1); }
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-base);
+}
+
+.lightbox-close:hover { background: rgba(255,255,255,0.2); }
+
+/* Facilities */
+.facility-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all var(--transition-base);
+}
+
+.facility-card:hover {
+  border-color: rgba(255, 107, 0, 0.3);
+  transform: translateX(4px);
+}
+
+.facility-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 12px;
+  background: var(--orange-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--orange);
+}
+
+.facility-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Location */
+.map-container {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 400px;
+  display: block;
+}
+
+/* Contact Form */
+.form-input {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  transition: all var(--transition-base);
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.1);
+}
+
+.form-input::placeholder { color: var(--text-muted); }
+
+textarea.form-input { resize: vertical; min-height: 120px; }
+
+/* Sticky Mobile CTA */
+.sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-color);
+  padding: 12px 16px;
+  display: none;
+  gap: 8px;
+  backdrop-filter: blur(20px);
+}
+
+.sticky-cta a {
+  flex: 1;
+  text-align: center;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.sticky-cta .whatsapp-btn {
+  background: #25D366;
+  color: #fff;
+}
+
+.sticky-cta .call-btn {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.sticky-cta .join-btn {
+  background: var(--orange);
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-color);
+  padding: 60px 0 100px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-brand h3 {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.footer-brand .tagline {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+.footer-social { display: flex; gap: 12px; margin-top: 20px; }
+
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--bg-elevated);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all var(--transition-base);
+  font-size: 18px;
+}
+
+.footer-social a:hover {
+  background: var(--orange);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.footer h4 {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.footer ul { list-style: none; }
+
+.footer ul li { margin-bottom: 10px; }
+
+.footer ul li a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color var(--transition-base);
+}
+
+.footer ul li a:hover { color: var(--orange); }
+
+.footer-contact li {
+  color: var(--text-secondary);
+  font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-bottom p {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* Animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.fade-in.visible { opacity: 1; }
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Hamburger */
+.hamburger {
+  width: 36px;
+  height: 36px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+
+.hamburger.open span:nth-child(2) { opacity: 0; }
+
+.hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .stats-bar { grid-template-columns: repeat(2, 1fr); }
+  .stat-item:nth-child(2) { border-right: none; }
+  .stat-item:nth-child(3), .stat-item:nth-child(4) { border-right: none; padding-top: 12px; border-top: 1px solid var(--border-color); }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 60px 0; }
+  .desktop-nav { display: none; }
+  .hamburger { display: flex; }
+  .header-actions { gap: 8px; }
+  .hero h1 { font-size: 42px; }
+  .hero-actions { flex-direction: column; }
+  .hero-actions .btn-primary, .hero-actions .btn-secondary { width: 100%; justify-content: center; }
+  .stats-bar { grid-template-columns: repeat(2, 1fr); margin-top: 40px; padding: 20px; }
+  .pricing-card.featured { transform: none; }
+  .pricing-card.featured:hover { transform: translateY(-8px); }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-item.tall { grid-row: span 1; }
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+  .sticky-cta { display: flex; }
+  footer { padding-bottom: 80px; }
+  .lang-switcher { display: none; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 34px; }
+  .section-title { font-size: 26px; }
+  .pricing-card { padding: 32px 20px; }
+  .gallery-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- Mobile Overlay -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <nav class="flex flex-col gap-4">
+    <a href="#why-us" class="nav-link text-[15px] font-medium text-[var(--text-secondary)] hover:text-[var(--orange)] transition-all py-2" data-i18n="nav_why_us">Why Choose Us</a>
+    <a href="#plans" class="nav-link text-[15px] font-medium text-[var(--text-secondary)] hover:text-[var(--orange)] transition-all py-2" data-i18n="nav_plans">Plans</a>
+    <a href="#coaches" class="nav-link text-[15px] font-medium text-[var(--text-secondary)] hover:text-[var(--orange)] transition-all py-2" data-i18n="nav_coaches">Coaches</a>
+    <a href="#gallery" class="nav-link text-[15px] font-medium text-[var(--text-secondary)] hover:text-[var(--orange)] transition-all py-2" data-i18n="nav_gallery">Gallery</a>
+    <a href="#location" class="nav-link text-[15px] font-medium text-[var(--text-secondary)] hover:text-[var(--orange)] transition-all py-2" data-i18n="nav_location">Location</a>
+    <a href="#contact" class="nav-link text-[15px] font-medium text-[var(--text-secondary)] hover:text-[var(--orange)] transition-all py-2" data-i18n="nav_contact">Contact</a>
+  </nav>
+  <div class="mt-6 pt-6 border-t border-[var(--border-color)] flex gap-2">
+    <button onclick="setLanguage('en')" class="lang-btn flex-1 text-center" data-lang="en">EN</button>
+    <button onclick="setLanguage('fr')" class="lang-btn flex-1 text-center" data-lang="fr">FR</button>
+    <button onclick="setLanguage('ar')" class="lang-btn flex-1 text-center" data-lang="ar">AR</button>
+  </div>
+</div>
+
+<!-- Header -->
+<header id="header">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+      <a href="#" class="flex items-center gap-2 text-xl font-extrabold tracking-tight">
+        <span style="color: var(--orange);">K</span>
+        <span>-Fitness</span>
+      </a>
+      <nav class="desktop-nav flex items-center gap-8">
+        <a href="#why-us" class="text-[14px] font-medium text-[var(--text-secondary)] hover:text-[var(--orange)] transition-all" data-i18n="nav_why_us">Why Choose Us</a>
+        <a href="#plans" class="text-[14px] font-medium text-[var(--text-secondary)] hover:text-[var(--orange)] transition-all" data-i18n="nav_plans">Plans</a>
+        <a href="#coaches" class="text-[14px] font-medium text-[var(--text-secondary)] hover:text-[var(--orange)] transition-all" data-i18n="nav_coaches">Coaches</a>
+        <a href="#gallery" class="text-[14px] font-medium text-[var(--text-secondary)] hover:text-[var(--orange)] transition-all" data-i18n="nav_gallery">Gallery</a>
+        <a href="#location" class="text-[14px] font-medium text-[var(--text-secondary)] hover:text-[var(--orange)] transition-all" data-i18n="nav_location">Location</a>
+        <a href="#contact" class="text-[14px] font-medium text-[var(--text-secondary)] hover:text-[var(--orange)] transition-all" data-i18n="nav_contact">Contact</a>
+      </nav>
+      <div class="header-actions flex items-center gap-3">
+        <div class="lang-switcher flex items-center bg-[var(--bg-elevated)] rounded-lg p-1">
+          <button onclick="setLanguage('en')" class="lang-btn active" data-lang="en">EN</button>
+          <button onclick="setLanguage('fr')" class="lang-btn" data-lang="fr">FR</button>
+          <button onclick="setLanguage('ar')" class="lang-btn" data-lang="ar">AR</button>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()" id="themeToggle" aria-label="Toggle theme">🌙</button>
+        <button class="hamburger" id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <img src="images/gym-1.jpg" alt="K-Fitness Club Interior" loading="eager">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <div class="hero-badge fade-up">
+          <span>★</span>
+          <span>5.0</span>
+          <span>•</span>
+          <span data-i18n="hero_badge">Casablanca's Top Rated Gym</span>
+        </div>
+        <h1 class="fade-up" style="transition-delay: 0.1s; color: #fff;">
+          <span data-i18n="hero_line1">Transform Your Body.</span><br>
+          <span class="highlight" data-i18n="hero_line2">Elevate Your Life.</span>
+        </h1>
+        <p class="fade-up" style="transition-delay: 0.2s;" data-i18n="hero_sub">Modern Fitness Center in Sidi Maarouf with Premium Equipment, Professional Coaches and Affordable Membership Plans.</p>
+        <div class="hero-actions fade-up" style="transition-delay: 0.3s;">
+          <a href="#plans" class="btn-primary">
+            <span data-i18n="start_today">Start Today</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="https://wa.me/212653122970" target="_blank" rel="noopener" class="btn-secondary" style="color: #fff; border-color: rgba(255,255,255,0.2);">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span data-i18n="contact_whatsapp">Contact on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Bar -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-10">
+  <div class="stats-bar fade-up">
+    <div class="stat-item"><div class="stat-number">34.6K+</div><div class="stat-label" data-i18n="stat_followers">Followers</div></div>
+    <div class="stat-item"><div class="stat-number">5.0</div><div class="stat-label" data-i18n="stat_rating">Google Rating</div></div>
+    <div class="stat-item"><div class="stat-number">22+</div><div class="stat-label" data-i18n="stat_reviews">Google Reviews</div></div>
+    <div class="stat-item"><div class="stat-number">7</div><div class="stat-label" data-i18n="stat_days">Days / Week</div></div>
+  </div>
+</div>
+
+<!-- Why Choose Us -->
+<section class="section" id="why-us">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 fade-up">
+      <div class="section-label justify-center"><span>✦</span><span data-i18n="why_label">Why K-Fitness</span></div>
+      <h2 class="section-title" data-i18n="why_title">Why Choose Us</h2>
+      <p class="section-subtitle mx-auto" data-i18n="why_sub">Experience the best fitness journey with premium equipment, expert coaches, and a community that supports you every step of the way.</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="feature-card fade-up"><div class="feature-icon">🏋️</div><h3 data-i18n="feat1_title">Premium Equipment</h3><p data-i18n="feat1_desc">State-of-the-art machines and free weights for optimal results.</p></div>
+      <div class="feature-card fade-up" style="transition-delay:0.1s"><div class="feature-icon">👨‍🏫</div><h3 data-i18n="feat2_title">Professional Coaches</h3><p data-i18n="feat2_desc">Certified trainers dedicated to your success and safety.</p></div>
+      <div class="feature-card fade-up" style="transition-delay:0.2s"><div class="feature-icon">💰</div><h3 data-i18n="feat3_title">Affordable Memberships</h3><p data-i18n="feat3_desc">Premium fitness at prices that won't break the bank.</p></div>
+      <div class="feature-card fade-up" style="transition-delay:0.3s"><div class="feature-icon">🤝</div><h3 data-i18n="feat4_title">Friendly Community</h3><p data-i18n="feat4_desc">Supportive atmosphere where everyone belongs.</p></div>
+      <div class="feature-card fade-up" style="transition-delay:0.4s"><div class="feature-icon">📅</div><h3 data-i18n="feat5_title">Open 7 Days A Week</h3><p data-i18n="feat5_desc">Train on your schedule with extended hours every day.</p></div>
+      <div class="feature-card fade-up" style="transition-delay:0.5s"><div class="feature-icon">✨</div><h3 data-i18n="feat6_title">Clean & Modern</h3><p data-i18n="feat6_desc">Spotless facilities designed for the best experience.</p></div>
+      <div class="feature-card fade-up" style="transition-delay:0.6s"><div class="feature-icon">⭐</div><h3 data-i18n="feat7_title">Excellent Service</h3><p data-i18n="feat7_desc">We go above and beyond for every member.</p></div>
+      <div class="feature-card fade-up" style="transition-delay:0.7s"><div class="feature-icon">📍</div><h3 data-i18n="feat8_title">Prime Location</h3><p data-i18n="feat8_desc">Near Casanearshore Porte Sud in Sidi Maarouf.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Membership Plans -->
+<section class="section" id="plans" style="background: var(--bg-secondary);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 fade-up">
+      <div class="section-label justify-center"><span>🏆</span><span data-i18n="plans_label">Membership</span></div>
+      <h2 class="section-title" data-i18n="plans_title">Choose Your Plan</h2>
+      <p class="section-subtitle mx-auto" data-i18n="plans_sub">Flexible membership options designed to fit your lifestyle and fitness goals.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto items-start">
+      <div class="pricing-card fade-up">
+        <div class="pricing-name" data-i18n="plan1_name">1 Month</div>
+        <div class="pricing-price"><span class="currency">DH</span> 200</div>
+        <div class="pricing-duration" data-i18n="plan1_dur">per month</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li data-i18n="plan1_f1">Full Gym Access</li>
+          <li data-i18n="plan1_f2">All Equipment</li>
+          <li data-i18n="plan1_f3">Locker Room Access</li>
+          <li data-i18n="plan1_f4">Free Wi-Fi</li>
+        </ul>
+        <a href="https://wa.me/212653122970?text=Hi%20K-Fitness!%20I%27m%20interested%20in%20the%201%20Month%20plan%20(200%20DH)" target="_blank" rel="noopener" class="btn-primary w-full justify-center">
+          <span data-i18n="join_now">Join Now</span>
+        </a>
+      </div>
+      <div class="pricing-card featured fade-up" style="transition-delay:0.1s">
+        <div class="pricing-badge" data-i18n="popular">Most Popular</div>
+        <div class="pricing-name" data-i18n="plan2_name">3 Months</div>
+        <div class="pricing-price"><span class="currency">DH</span> 500</div>
+        <div class="pricing-duration" data-i18n="plan2_dur">3 months</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li data-i18n="plan2_f1">Full Gym Access</li>
+          <li data-i18n="plan2_f2">All Equipment</li>
+          <li data-i18n="plan2_f3">Coach Guidance</li>
+          <li data-i18n="plan2_f4">Locker + Wi-Fi</li>
+          <li data-i18n="plan2_f5">Free Fitness Assessment</li>
+        </ul>
+        <a href="https://wa.me/212653122970?text=Hi%20K-Fitness!%20I%27m%20interested%20in%20the%203%20Months%20plan%20(500%20DH)" target="_blank" rel="noopener" class="btn-primary w-full justify-center">
+          <span data-i18n="join_now">Join Now</span>
+        </a>
+      </div>
+      <div class="pricing-card fade-up" style="transition-delay:0.2s">
+        <div class="pricing-name" data-i18n="plan3_name">12 Months</div>
+        <div class="pricing-price"><span class="currency">DH</span> 1,200</div>
+        <div class="pricing-duration" data-i18n="plan3_dur">per year</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li data-i18n="plan3_f1">Full Gym Access</li>
+          <li data-i18n="plan3_f2">All Equipment</li>
+          <li data-i18n="plan3_f3">Personal Coach</li>
+          <li data-i18n="plan3_f4">Locker + Wi-Fi</li>
+          <li data-i18n="plan3_f5">Nutrition Plan</li>
+          <li data-i18n="plan3_f6">Free Assessment</li>
+        </ul>
+        <a href="https://wa.me/212653122970?text=Hi%20K-Fitness!%20I%27m%20interested%20in%20the%2012%20Months%20plan%20(1200%20DH)" target="_blank" rel="noopener" class="btn-primary w-full justify-center">
+          <span data-i18n="join_now">Join Now</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Coaches -->
+<section class="section" id="coaches">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 fade-up">
+      <div class="section-label justify-center"><span>👨‍🏫</span><span data-i18n="coaches_label">Our Team</span></div>
+      <h2 class="section-title" data-i18n="coaches_title">Meet Our Coaches</h2>
+      <p class="section-subtitle mx-auto" data-i18n="coaches_sub">Experienced trainers dedicated to helping members achieve their fitness goals safely and efficiently.</p>
+    </div>
+    <div class="max-w-3xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="coach-card fade-up">
+          <div class="relative overflow-hidden" style="aspect-ratio: 3/4;">
+            <img src="./images/Ayoub-Coach.jpeg" alt="Ayoub" class="w-full h-full object-cover" loading="lazy" style="object-fit: cover; width: 100%; height: 100%;">
+          </div>
+          <div class="coach-info text-center">
+            <h3 class="text-xl font-bold">Ayoub</h3>
+            <p class="text-[var(--text-secondary)] text-sm mt-1" data-i18n="coach1_role">Coach</p>
+          </div>
+        </div>
+        <div class="coach-card fade-up" style="transition-delay:0.1s">
+          <div class="relative overflow-hidden" style="aspect-ratio: 3/4;">
+            <img src="./images/Demba-Coach.jpeg" alt="Demba" class="w-full h-full object-cover" loading="lazy" style="object-fit: cover; width: 100%; height: 100%;">
+          </div>
+          <div class="coach-info text-center">
+            <h3 class="text-xl font-bold">Demba</h3>
+            <p class="text-[var(--text-secondary)] text-sm mt-1" data-i18n="coach2_role">Coach</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section" id="testimonials" style="background: var(--bg-secondary);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 fade-up">
+      <div class="section-label justify-center"><span>⭐</span><span data-i18n="test_label">Testimonials</span></div>
+      <h2 class="section-title" data-i18n="test_title">What Members Say</h2>
+      <p class="section-subtitle mx-auto" data-i18n="test_sub">Real reviews from our K-Fitness community.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="testimonial-card fade-up">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text" data-i18n="review1">"K Fitness est un super gym ! Le personnel est très accueillant. L'ambiance est top et les prix sont excellents."</p>
+        <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-[var(--orange-light)] flex items-center justify-center text-[var(--orange)] font-bold">M</div><div><div class="font-semibold text-sm">Mehdi</div></div></div>
+      </div>
+      <div class="testimonial-card fade-up" style="transition-delay:0.1s">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text" data-i18n="review2">"Clean gym, very nice staff. All the gym machines are available so you can target all muscles."</p>
+        <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-[var(--orange-light)] flex items-center justify-center text-[var(--orange)] font-bold">S</div><div><div class="font-semibold text-sm">Sara</div></div></div>
+      </div>
+      <div class="testimonial-card fade-up" style="transition-delay:0.2s">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text" data-i18n="review3">"Salle de musculation très complète avec un staff super serviable. Merci au coach Ayoub et Demba."</p>
+        <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-[var(--orange-light)] flex items-center justify-center text-[var(--orange)] font-bold">O</div><div><div class="font-semibold text-sm">Omar</div></div></div>
+      </div>
+      <div class="testimonial-card fade-up" style="transition-delay:0.3s">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text" data-i18n="review4">"Le luxe à petit prix. Dernière génération de machines et excellent service."</p>
+        <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-[var(--orange-light)] flex items-center justify-center text-[var(--orange)] font-bold">K</div><div><div class="font-semibold text-sm">Karim</div></div></div>
+      </div>
+      <div class="testimonial-card fade-up" style="transition-delay:0.4s">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text" data-i18n="review5">"Salle complète et très propre."</p>
+        <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-[var(--orange-light)] flex items-center justify-center text-[var(--orange)] font-bold">N</div><div><div class="font-semibold text-sm">Nadia</div></div></div>
+      </div>
+      <div class="testimonial-card fade-up" style="transition-delay:0.5s">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text" data-i18n="review6">"Bien équipé et bonne ambiance pour faire du sport."</p>
+        <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-[var(--orange-light)] flex items-center justify-center text-[var(--orange)] font-bold">Y</div><div><div class="font-semibold text-sm">Youssef</div></div></div>
+      </div>
+    </div>
+    <div class="text-center mt-10 fade-up">
+      <div class="testimonial-stars text-2xl">★★★★★</div>
+      <div class="text-lg font-bold mt-1">5.0 <span class="text-[var(--text-secondary)] font-normal" data-i18n="test_rating">Rating</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="section" id="gallery">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 fade-up">
+      <div class="section-label justify-center"><span>📸</span><span data-i18n="gallery_label">Gallery</span></div>
+      <h2 class="section-title" data-i18n="gallery_title">Explore K-Fitness</h2>
+    </div>
+    <div class="gallery-grid fade-up">
+      <div class="gallery-item" onclick="openLightbox('images/gym-1.jpg')"><img src="images/gym-1.jpg" alt="K-Fitness Gym" loading="lazy"><div class="gallery-overlay"><span>🔍</span></div></div>
+      <div class="gallery-item" onclick="openLightbox('images/gym-2.jpg')"><img src="images/gym-2.jpg" alt="K-Fitness Gym Area" loading="lazy"><div class="gallery-overlay"><span>🔍</span></div></div>
+      <div class="gallery-item" onclick="openLightbox('images/gym-3.jpg')"><img src="images/gym-3.jpg" alt="K-Fitness Facility" loading="lazy"><div class="gallery-overlay"><span>🔍</span></div></div>
+      <div class="gallery-item" onclick="openLightbox('images/gym-4.jpg')"><img src="images/gym-4.jpg" alt="K-Fitness Equipment" loading="lazy"><div class="gallery-overlay"><span>🔍</span></div></div>
+      <div class="gallery-item" onclick="openLightbox('images/gym-5.jpg')"><img src="images/gym-5.jpg" alt="K-Fitness Training" loading="lazy"><div class="gallery-overlay"><span>🔍</span></div></div>
+      <div class="gallery-item" onclick="openLightbox('images/gym-8.jpg')"><img src="images/gym-8.jpg" alt="K-Fitness Machines" loading="lazy"><div class="gallery-overlay"><span>🔍</span></div></div>
+      <div class="gallery-item" onclick="openLightbox('images/gym-6.jpg')"><img src="images/gym-6.jpg" alt="K-Fitness Workout Area" loading="lazy"><div class="gallery-overlay"><span>🔍</span></div></div>
+      <div class="gallery-item" onclick="openLightbox('images/gym-7.jpg')"><img src="images/gym-7.jpg" alt="K-Fitness Coach Area" loading="lazy"><div class="gallery-overlay"><span>🔍</span></div></div>
+      <div class="gallery-item" onclick="openLightbox('images/gym-9.jpg')"><img src="images/gym-9.jpg" alt="K-Fitness Gym Details" loading="lazy"><div class="gallery-overlay"><span>🔍</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightboxImg" src="" alt="K-Fitness Gallery">
+</div>
+
+<!-- Facilities -->
+<section class="section" id="facilities" style="background: var(--bg-secondary);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 fade-up">
+      <div class="section-label justify-center"><span>🏛️</span><span data-i18n="fac_label">Facilities</span></div>
+      <h2 class="section-title" data-i18n="fac_title">Our Facilities</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+      <div class="facility-card fade-up"><div class="facility-icon">🏋️</div><h4 data-i18n="fac1">Weight Training Area</h4></div>
+      <div class="facility-card fade-up" style="transition-delay:0.1s"><div class="facility-icon">🚴</div><h4 data-i18n="fac2">Cardio Equipment</h4></div>
+      <div class="facility-card fade-up" style="transition-delay:0.2s"><div class="facility-icon">⚙️</div><h4 data-i18n="fac3">Strength Machines</h4></div>
+      <div class="facility-card fade-up" style="transition-delay:0.3s"><div class="facility-icon">🔐</div><h4 data-i18n="fac4">Locker Area</h4></div>
+      <div class="facility-card fade-up" style="transition-delay:0.4s"><div class="facility-icon">👨‍🏫</div><h4 data-i18n="fac5">Professional Coaching</h4></div>
+      <div class="facility-card fade-up" style="transition-delay:0.5s"><div class="facility-icon">✨</div><h4 data-i18n="fac6">Clean Environment</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- Location -->
+<section class="section" id="location">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="fade-up">
+        <div class="section-label"><span>📍</span><span data-i18n="loc_label">Location</span></div>
+        <h2 class="section-title" data-i18n="loc_title">Visit Us</h2>
+        <p class="text-[var(--text-secondary)] text-[17px] leading-relaxed mb-6" data-i18n="loc_sub">Come train at the premier fitness center in Sidi Maarouf.</p>
+        <div class="space-y-4">
+          <div class="flex items-start gap-4"><div class="w-12 h-12 rounded-xl bg-[var(--orange-light)] flex items-center justify-center text-[var(--orange)] text-xl shrink-0">📍</div><div><h4 class="font-semibold mb-1" data-i18n="loc_address">Address</h4><p class="text-[var(--text-secondary)] text-sm">67 Lotissement Chaimaa<br>Sidi Maarouf, Casablanca<br>Near Casanearshore Porte Sud</p></div></div>
+          <div class="flex items-start gap-4"><div class="w-12 h-12 rounded-xl bg-[var(--orange-light)] flex items-center justify-center text-[var(--orange)] text-xl shrink-0">🕐</div><div><h4 class="font-semibold mb-1" data-i18n="loc_hours">Opening Hours</h4><p class="text-[var(--text-secondary)] text-sm" data-i18n="loc_hours_text">Open 7 Days A Week<br>6:00 AM — 11:00 PM</p></div></div>
+          <div class="flex items-start gap-4"><div class="w-12 h-12 rounded-xl bg-[var(--orange-light)] flex items-center justify-center text-[var(--orange)] text-xl shrink-0">📞</div><div><h4 class="font-semibold mb-1" data-i18n="loc_phone">Phone</h4><p class="text-[var(--text-secondary)] text-sm">06 53122970 / 06 61060219</p></div></div>
+        </div>
+        <div class="mt-8 flex gap-3 flex-wrap">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=67+Lotissement+Chaimaa+Sidi+Maarouf+Casablanca+Morocco" target="_blank" rel="noopener" class="btn-primary">
+            <span data-i18n="get_directions">Get Directions</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+          </a>
+        </div>
+      </div>
+      <a href="https://share.google/dpbzm4mJevZrAyNQi" target="_blank" rel="noopener" class="map-container fade-up block relative overflow-hidden group" style="transition-delay:0.2s; height: 400px;">
+        <img src="images/gym-2.jpg" alt="K-Fitness Location" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-8">
+          <div class="w-20 h-20 rounded-full bg-[var(--orange)] flex items-center justify-center text-3xl mb-4 shadow-lg shadow-[var(--orange-glow)]">📍</div>
+          <h3 class="text-2xl font-bold mb-2">67 Lotissement Chaimaa</h3>
+          <p class="text-white/70 text-center mb-6">Sidi Maarouf, Casablanca • Near Casanearshore Porte Sud</p>
+          <span class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-semibold hover:bg-white/20 transition-all">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Open in Google Maps
+          </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section" id="contact" style="background: var(--bg-secondary);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div class="fade-up">
+        <div class="section-label"><span>💬</span><span data-i18n="contact_label">Contact</span></div>
+        <h2 class="section-title" data-i18n="contact_title">Get In Touch</h2>
+        <p class="text-[var(--text-secondary)] text-[17px] leading-relaxed mb-8" data-i18n="contact_sub">Ready to start your fitness journey? Reach out to us.</p>
+        <div class="space-y-4 mb-8">
+          <a href="tel:0653122970" class="flex items-center gap-4 p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-[var(--orange)] transition-all no-underline">
+            <div class="w-12 h-12 rounded-xl bg-[var(--orange-light)] flex items-center justify-center text-[var(--orange)] text-xl shrink-0">📞</div>
+            <div><div class="font-semibold text-sm text-[var(--text-secondary)]" data-i18n="phone1">Phone 1</div><div class="font-semibold text-base">0653122970</div></div>
+          </a>
+          <a href="tel:0661060219" class="flex items-center gap-4 p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-[var(--orange)] transition-all no-underline">
+            <div class="w-12 h-12 rounded-xl bg-[var(--orange-light)] flex items-center justify-center text-[var(--orange)] text-xl shrink-0">📞</div>
+            <div><div class="font-semibold text-sm text-[var(--text-secondary)]" data-i18n="phone2">Phone 2</div><div class="font-semibold text-base">0661060219</div></div>
+          </a>
+          <a href="https://wa.me/212653122970" target="_blank" rel="noopener" class="flex items-center gap-4 p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-[#25D366] transition-all no-underline">
+            <div class="w-12 h-12 rounded-xl bg-[rgba(37,211,102,0.1)] flex items-center justify-center text-[#25D366] text-xl shrink-0">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <div><div class="font-semibold text-sm text-[var(--text-secondary)]">WhatsApp</div><div class="font-semibold text-base">Chat with us</div></div>
+          </a>
+          <a href="https://instagram.com/k.fitness.club" target="_blank" rel="noopener" class="flex items-center gap-4 p-4 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-[#E4405F] transition-all no-underline">
+            <div class="w-12 h-12 rounded-xl bg-[rgba(228,64,95,0.1)] flex items-center justify-center text-[#E4405F] text-xl shrink-0">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </div>
+            <div><div class="font-semibold text-sm text-[var(--text-secondary)]">Instagram</div><div class="font-semibold text-base">@k.fitness.club</div></div>
+          </a>
+        </div>
+      </div>
+      <div class="fade-up" style="transition-delay:0.2s">
+        <div class="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-8">
+          <h3 class="text-xl font-bold mb-6" data-i18n="form_title">Send Us a Message</h3>
+          <form id="contactForm" onsubmit="handleSubmit(event)" class="space-y-4">
+            <input type="text" name="name" class="form-input" placeholder="Your Name" required data-i18n-placeholder="form_name">
+            <input type="tel" name="phone" class="form-input" placeholder="Phone Number" required data-i18n-placeholder="form_phone">
+            <input type="email" name="email" class="form-input" placeholder="Email Address" required data-i18n-placeholder="form_email">
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-i18n-placeholder="form_message"></textarea>
+            <button type="submit" class="btn-primary w-full justify-center">
+              <span data-i18n="send_message">Send Message</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sticky Mobile CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <a href="https://wa.me/212653122970" target="_blank" rel="noopener" class="whatsapp-btn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span data-i18n="whatsapp">WhatsApp</span>
+  </a>
+  <a href="tel:0653122970" class="call-btn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    <span data-i18n="call">Call Now</span>
+  </a>
+  <a href="#plans" class="join-btn">
+    <span data-i18n="join">Join Now</span>
+  </a>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3><span style="color: var(--orange);">K</span>-Fitness</h3>
+        <p class="tagline" data-i18n="footer_tagline">Premium fitness center in Sidi Maarouf, Casablanca. Transform your body, elevate your life.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/k.fitness.club" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://wa.me/212653122970" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <a href="tel:0653122970" aria-label="Phone">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 data-i18n="quick_links">Quick Links</h4>
+        <ul>
+          <li><a href="#hero" data-i18n="nav_home">Home</a></li>
+          <li><a href="#why-us" data-i18n="nav_why_us">Why Choose Us</a></li>
+          <li><a href="#plans" data-i18n="nav_plans">Plans</a></li>
+          <li><a href="#coaches" data-i18n="nav_coaches">Coaches</a></li>
+          <li><a href="#gallery" data-i18n="nav_gallery">Gallery</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="opening_hours">Opening Hours</h4>
+        <ul>
+          <li><span class="text-[var(--text-secondary)] text-sm" data-i18n="every_day">Every Day</span></li>
+          <li><span class="font-semibold">6:00 AM — 11:00 PM</span></li>
+          <li class="mt-4"><span class="text-sm text-[var(--text-secondary)]" data-i18n="open_weekends">Open Weekends</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="contact_info">Contact</h4>
+        <ul class="footer-contact">
+          <li><span>📞</span> 0653122970</li>
+          <li><span>📞</span> 0661060219</li>
+          <li><span>📍</span> 67 Lot. Chaimaa, Sidi Maarouf, Casablanca</li>
+          <li><span>📧</span> contact@k-fitness.ma</li>
+        </ul>
+        <div class="mt-4 flex gap-2">
+          <button onclick="setLanguage('en')" class="lang-btn px-3 py-1.5 text-xs" data-lang="en">English</button>
+          <button onclick="setLanguage('fr')" class="lang-btn px-3 py-1.5 text-xs" data-lang="fr">Français</button>
+          <button onclick="setLanguage('ar')" class="lang-btn px-3 py-1.5 text-xs" data-lang="ar">العربية</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 <strong>K-Fitness Club</strong>. <span data-i18n="copyright">All rights reserved.</span></p>
+      <p data-i18n="made_with">Made by Morad in Casablanca</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ===== TRANSLATIONS =====
+const translations = {
+  en: {
+    nav_why_us: "Why Choose Us", nav_plans: "Plans", nav_coaches: "Coaches",
+    nav_gallery: "Gallery", nav_location: "Location", nav_contact: "Contact",
+    nav_home: "Home",
+    hero_badge: "Casablanca's Top Rated Gym",
+    hero_line1: "Transform Your Body.", hero_line2: "Elevate Your Life.",
+    hero_sub: "Modern Fitness Center in Sidi Maarouf with Premium Equipment, Professional Coaches and Affordable Membership Plans.",
+    start_today: "Start Today", contact_whatsapp: "Contact on WhatsApp",
+    stat_followers: "Followers", stat_rating: "Google Rating", stat_reviews: "Google Reviews", stat_days: "Days / Week",
+    why_label: "Why K-Fitness", why_title: "Why Choose Us",
+    why_sub: "Experience the best fitness journey with premium equipment, expert coaches, and a community that supports you every step of the way.",
+    feat1_title: "Premium Equipment", feat1_desc: "State-of-the-art machines and free weights for optimal results.",
+    feat2_title: "Professional Coaches", feat2_desc: "Certified trainers dedicated to your success and safety.",
+    feat3_title: "Affordable Memberships", feat3_desc: "Premium fitness at prices that won't break the bank.",
+    feat4_title: "Friendly Community", feat4_desc: "Supportive atmosphere where everyone belongs.",
+    feat5_title: "Open 7 Days A Week", feat5_desc: "Train on your schedule with extended hours every day.",
+    feat6_title: "Clean & Modern", feat6_desc: "Spotless facilities designed for the best experience.",
+    feat7_title: "Excellent Service", feat7_desc: "We go above and beyond for every member.",
+    feat8_title: "Prime Location", feat8_desc: "Near Casanearshore Porte Sud in Sidi Maarouf.",
+    plans_label: "Membership", plans_title: "Choose Your Plan",
+    plans_sub: "Flexible membership options designed to fit your lifestyle and fitness goals.",
+    plan1_name: "1 Month", plan1_dur: "per month",
+    plan1_f1: "Full Gym Access", plan1_f2: "All Equipment", plan1_f3: "Locker Room Access", plan1_f4: "Free Wi-Fi",
+    plan2_name: "3 Months", plan2_dur: "3 months",
+    plan2_f1: "Full Gym Access", plan2_f2: "All Equipment", plan2_f3: "Coach Guidance", plan2_f4: "Locker + Wi-Fi", plan2_f5: "Free Fitness Assessment",
+    plan3_name: "12 Months", plan3_dur: "per year",
+    plan3_f1: "Full Gym Access", plan3_f2: "All Equipment", plan3_f3: "Personal Coach", plan3_f4: "Locker + Wi-Fi", plan3_f5: "Nutrition Plan", plan3_f6: "Free Assessment",
+    popular: "Most Popular", join_now: "Join Now",
+    coaches_label: "Our Team", coaches_title: "Meet Our Coaches",
+    coaches_sub: "Experienced trainers dedicated to helping members achieve their fitness goals safely and efficiently.",
+    coach1_role: "Coach",
+    coach2_role: "Coach",
+    test_label: "Testimonials", test_title: "What Members Say",
+    test_sub: "Real reviews from our K-Fitness community.",
+    test_rating: "Rating",
+    review1: '"K Fitness est un super gym ! Le personnel est très accueillant. L\'ambiance est top et les prix sont excellents."',
+    review2: '"Clean gym, very nice staff. All the gym machines are available so you can target all muscles."',
+    review3: '"Salle de musculation très complète avec un staff super serviable. Merci au coach Ayoub et Demba."',
+    review4: '"Le luxe à petit prix. Dernière génération de machines et excellent service."',
+    review5: '"Salle complète et très propre."',
+    review6: '"Bien équipé et bonne ambiance pour faire du sport."',
+    gallery_label: "Gallery", gallery_title: "Explore K-Fitness",
+    fac_label: "Facilities", fac_title: "Our Facilities",
+    fac1: "Weight Training Area", fac2: "Cardio Equipment", fac3: "Strength Machines",
+    fac4: "Locker Area", fac5: "Professional Coaching", fac6: "Clean Environment",
+    loc_label: "Location", loc_title: "Visit Us",
+    loc_sub: "Come train at the premier fitness center in Sidi Maarouf.",
+    loc_address: "Address", loc_hours: "Opening Hours",
+    loc_hours_text: "Open 7 Days A Week\n6:00 AM — 11:00 PM",
+    loc_phone: "Phone", get_directions: "Get Directions",
+    contact_label: "Contact", contact_title: "Get In Touch",
+    contact_sub: "Ready to start your fitness journey? Reach out to us.",
+    phone1: "Phone 1", phone2: "Phone 2",
+    form_title: "Send Us a Message",
+    form_name: "Your Name", form_phone: "Phone Number", form_email: "Email Address", form_message: "Your Message",
+    send_message: "Send Message",
+    whatsapp: "WhatsApp", call: "Call Now", join: "Join Now",
+    footer_tagline: "Premium fitness center in Sidi Maarouf, Casablanca. Transform your body, elevate your life.",
+    quick_links: "Quick Links", opening_hours: "Opening Hours",
+    every_day: "Every Day", open_weekends: "Open Weekends",
+    contact_info: "Contact",
+    copyright: "All rights reserved.",
+    made_with: "Made by Morad in Casablanca",
+  },
+  fr: {
+    nav_why_us: "Pourquoi Nous", nav_plans: "Abonnements", nav_coaches: "Coach",
+    nav_gallery: "Galerie", nav_location: "Emplacement", nav_contact: "Contact",
+    nav_home: "Accueil",
+    hero_badge: "Le Meilleur Gym de Casablanca",
+    hero_line1: "Transformez Votre Corps.", hero_line2: "Élevez Votre Vie.",
+    hero_sub: "Centre de fitness moderne à Sidi Maarouf avec équipement haut de gamme, coachs professionnels et abonnements abordables.",
+    start_today: "Commencez Aujourd'hui", contact_whatsapp: "Contactez sur WhatsApp",
+    stat_followers: "Abonnés", stat_rating: "Avis Google", stat_reviews: "Avis", stat_days: "Jours / Semaine",
+    why_label: "Pourquoi K-Fitness", why_title: "Pourquoi Nous Choisir",
+    why_sub: "Vivez la meilleure expérience fitness avec un équipement premium, des coachs experts et une communauté qui vous soutient.",
+    feat1_title: "Équipement Premium", feat1_desc: "Machines de pointe et poids libres pour des résultats optimaux.",
+    feat2_title: "Coach Professionnels", feat2_desc: "Entraîneurs certifiés dédiés à votre réussite et sécurité.",
+    feat3_title: "Abonnements Abordables", feat3_desc: "Fitness premium à des prix qui ne ruinent pas.",
+    feat4_title: "Communauté Amicale", feat4_desc: "Ambiance conviviale où tout le monde a sa place.",
+    feat5_title: "Ouvert 7 Jours/7", feat5_desc: "Entraînez-vous selon votre horaire tous les jours.",
+    feat6_title: "Propre & Moderne", feat6_desc: "Installations impeccables pour la meilleure expérience.",
+    feat7_title: "Service Excellent", feat7_desc: "Nous allons au-delà pour chaque membre.",
+    feat8_title: "Emplacement Idéal", feat8_desc: "Près de Casanearshore Porte Sud à Sidi Maarouf.",
+    plans_label: "Abonnement", plans_title: "Choisissez Votre Plan",
+    plans_sub: "Options d'abonnement flexibles adaptées à votre style de vie.",
+    plan1_name: "1 Mois", plan1_dur: "par mois",
+    plan1_f1: "Accès Complet", plan1_f2: "Tous les Équipements", plan1_f3: "Casier Inclus", plan1_f4: "Wi-Fi Gratuit",
+    plan2_name: "3 Mois", plan2_dur: "3 mois",
+    plan2_f1: "Accès Complet", plan2_f2: "Tous les Équipements", plan2_f3: "Suivi Coach", plan2_f4: "Casier + Wi-Fi", plan2_f5: "Évaluation Gratuite",
+    plan3_name: "12 Mois", plan3_dur: "par an",
+    plan3_f1: "Accès Complet", plan3_f2: "Tous les Équipements", plan3_f3: "Coach Personnel", plan3_f4: "Casier + Wi-Fi", plan3_f5: "Plan Nutrition", plan3_f6: "Évaluation Gratuite",
+    popular: "Le Plus Populaire", join_now: "Rejoindre",
+    coaches_label: "Notre Équipe", coaches_title: "Nos Coachs",
+    coaches_sub: "Entraîneurs expérimentés dédiés à aider les membres à atteindre leurs objectifs.",
+    coach1_role: "Coach",
+    coach2_role: "Coach",
+    test_label: "Avis", test_title: "Ce Que Disent Nos Membres",
+    test_sub: "Avis réels de notre communauté K-Fitness.",
+    test_rating: "Note",
+    review1: '"K Fitness est un super gym ! Le personnel est très accueillant. L\'ambiance est top et les prix sont excellents."',
+    review2: '"Clean gym, very nice staff. All the gym machines are available so you can target all muscles."',
+    review3: '"Salle de musculation très complète avec un staff super serviable. Merci au coach Ayoub et Demba."',
+    review4: '"Le luxe à petit prix. Dernière génération de machines et excellent service."',
+    review5: '"Salle complète et très propre."',
+    review6: '"Bien équipé et bonne ambiance pour faire du sport."',
+    gallery_label: "Galerie", gallery_title: "Explorez K-Fitness",
+    fac_label: "Installations", fac_title: "Nos Installations",
+    fac1: "Musculation", fac2: "Cardio", fac3: "Machines",
+    fac4: "Casiers", fac5: "Coaching Pro", fac6: "Propreté",
+    loc_label: "Emplacement", loc_title: "Nous Visiter",
+    loc_sub: "Venez vous entraîner au premier centre de fitness de Sidi Maarouf.",
+    loc_address: "Adresse", loc_hours: "Horaires",
+    loc_hours_text: "Ouvert 7 Jours/7\n6:00 — 23:00",
+    loc_phone: "Téléphone", get_directions: "Itinéraire",
+    contact_label: "Contact", contact_title: "Contactez-Nous",
+    contact_sub: "Prêt à commencer votre parcours fitness ? Contactez-nous.",
+    phone1: "Téléphone 1", phone2: "Téléphone 2",
+    form_title: "Envoyez-Nous un Message",
+    form_name: "Votre Nom", form_phone: "Numéro de Téléphone", form_email: "Adresse Email", form_message: "Votre Message",
+    send_message: "Envoyer",
+    whatsapp: "WhatsApp", call: "Appeler", join: "Rejoindre",
+    footer_tagline: "Centre de fitness premium à Sidi Maarouf, Casablanca. Transformez votre corps, élevez votre vie.",
+    quick_links: "Liens Rapides", opening_hours: "Horaires",
+    every_day: "Tous les Jours", open_weekends: "Ouvert le Week-end",
+    contact_info: "Contact",
+    copyright: "Tous droits réservés.",
+    made_with: "Made by Morad in Casablanca",
+  },
+  ar: {
+    nav_why_us: "لماذا نحن", nav_plans: "الباقات", nav_coaches: "المدربين",
+    nav_gallery: "المعرض", nav_location: "الموقع", nav_contact: "اتصل بنا",
+    nav_home: "الرئيسية",
+    hero_badge: "أفضل صالة رياضية في الدار البيضاء",
+    hero_line1: "حول جسدك.", hero_line2: "ارتقِ بحياتك.",
+    hero_sub: "مركز لياقة بدنية حديث في سيدي معروف بأحدث المعدات ومدربين محترفين وباقات اشتراك مناسبة.",
+    start_today: "ابدأ اليوم", contact_whatsapp: "تواصل عبر واتساب",
+    stat_followers: "متابع", stat_rating: "تقييم Google", stat_reviews: "تقييم", stat_days: "أيام / أسبوع",
+    why_label: "لماذا K-Fitness", why_title: "لماذا تختارنا",
+    why_sub: "استمتع بأفضل تجربة لياقة بدنية مع معدات فاخرة ومدربين خبراء ومجتمع يدعمك في كل خطوة.",
+    feat1_title: "معدات فاخرة", feat1_desc: "أحدث الآلات والأوزان الحرة لنتائج مثالية.",
+    feat2_title: "مدربون محترفون", feat2_desc: "مدربون معتمدون مكرسون لنجاحك وسلامتك.",
+    feat3_title: "أسعار مناسبة", feat3_desc: "لياقة بدنية فاخرة بأسعار معقولة.",
+    feat4_title: "مجتمع ودود", feat4_desc: "أجواء داعمة يشعر فيها الجميع بالانتماء.",
+    feat5_title: "مفتوح 7 أيام", feat5_desc: "تدرب وفق جدولك بساعات ممتدة يومياً.",
+    feat6_title: "نظيف وعصري", feat6_desc: "مرافق نظيفة مصممة لأفضل تجربة.",
+    feat7_title: "خدمة ممتازة", feat7_desc: "نحن نقدم الأفضل لكل عضو.",
+    feat8_title: "موقع مميز", feat8_desc: "بالقرب من Casanearshore Porte Sud في سيدي معروف.",
+    plans_label: "الباقات", plans_title: "اختر باقتك",
+    plans_sub: "خيارات اشتراك مرنة مصممة لتناسب نمط حياتك وأهدافك.",
+    plan1_name: "شهر واحد", plan1_dur: "شهرياً",
+    plan1_f1: "دخول كامل", plan1_f2: "جميع المعدات", plan1_f3: "خزائن", plan1_f4: "واي فاي مجاني",
+    plan2_name: "3 أشهر", plan2_dur: "3 أشهر",
+    plan2_f1: "دخول كامل", plan2_f2: "جميع المعدات", plan2_f3: "إشراف مدرب", plan2_f4: "خزائن + واي فاي", plan2_f5: "تقييم مجاني",
+    plan3_name: "12 شهراً", plan3_dur: "سنوياً",
+    plan3_f1: "دخول كامل", plan3_f2: "جميع المعدات", plan3_f3: "مدرب شخصي", plan3_f4: "خزائن + واي فاي", plan3_f5: "خطة تغذية", plan3_f6: "تقييم مجاني",
+    popular: "الأكثر طلباً", join_now: "اشترك الآن",
+    coaches_label: "فريقنا", coaches_title: "تعرف على مدربينا",
+    coaches_sub: "مدربون ذوو خبرة مكرسون لمساعدة الأعضاء على تحقيق أهدافهم.",
+    coach1_role: "مدرب",
+    coach2_role: "مدرب",
+    test_label: "آراء", test_title: "ماذا يقول الأعضاء",
+    test_sub: "آراء حقيقية من مجتمع K-Fitness.",
+    test_rating: "تقييم",
+    review1: '"K Fitness صالة رائعة! الموظفون مرحبون جداً. الأجواء رائعة والأسعار ممتازة."',
+    review2: '"صالة نظيفة وموظفون لطفاء. جميع أجهزة الجيم متavailable لاستهداف جميع العضلات."',
+    review3: '"صالة كمال أجسام متكاملة مع طاقم مفيد جداً. شكراً للمدرب أيوب وديمبا."',
+    review4: '"الفخامة بسعر منخفض. أحدث جيل من الأجهزة وخدمة ممتازة."',
+    review5: '"صالة متكاملة ونظيفة جداً."',
+    review6: '"مجهزة جيداً وأجواء رائعة لممارسة الرياضة."',
+    gallery_label: "معرض", gallery_title: "استكشف K-Fitness",
+    fac_label: "المرافق", fac_title: "مرافقنا",
+    fac1: "منطقة الأوزان", fac2: "معدات القلب", fac3: "آلات القوة",
+    fac4: "خزائن", fac5: "تدريب احترافي", fac6: "بيئة نظيفة",
+    loc_label: "الموقع", loc_title: "زرنا",
+    loc_sub: "تعال وتدرب في أفضل مركز لياقة في سيدي معروف.",
+    loc_address: "العنوان", loc_hours: "ساعات العمل",
+    loc_hours_text: "مفتوح 7 أيام في الأسبوع\n6:00 صباحاً — 11:00 مساءً",
+    loc_phone: "الهاتف", get_directions: "اتجاهات",
+    contact_label: "اتصل", contact_title: "تواصل معنا",
+    contact_sub: "مستعد لبدء رحلة اللياقة؟ تواصل معنا.",
+    phone1: "الهاتف 1", phone2: "الهاتف 2",
+    form_title: "أرسل لنا رسالة",
+    form_name: "الاسم", form_phone: "رقم الهاتف", form_email: "البريد الإلكتروني", form_message: "رسالتك",
+    send_message: "إرسال",
+    whatsapp: "واتساب", call: "اتصل", join: "اشترك",
+    footer_tagline: "مركز لياقة فاخر في سيدي معروف، الدار البيضاء. حول جسدك، ارتقِ بحياتك.",
+    quick_links: "روابط سريعة", opening_hours: "ساعات العمل",
+    every_day: "كل يوم", open_weekends: "مفتوح عطلات نهاية الأسبوع",
+    contact_info: "معلومات الاتصال",
+    copyright: "جميع الحقوق محفوظة.",
+    made_with: "صنع من قبل مراد في الدار البيضاء",
+  }
+};
+
+let currentLang = localStorage.getItem('kf-lang') || 'en';
+let currentTheme = localStorage.getItem('kf-theme') || 'dark';
+
+function applyLanguage(lang) {
+  const t = translations[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (t[key]) el.textContent = t[key];
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.dataset.i18nPlaceholder;
+    if (t[key]) el.placeholder = t[key];
+  });
+  document.documentElement.lang = lang === 'ar' ? 'ar' : lang;
+  if (lang === 'ar') {
+    document.documentElement.dir = 'rtl';
+    document.documentElement.classList.add('rtl');
+  } else {
+    document.documentElement.dir = 'ltr';
+    document.documentElement.classList.remove('rtl');
+  }
+  document.querySelectorAll('.lang-btn[data-lang]').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+}
+
+function setLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem('kf-lang', lang);
+  applyLanguage(lang);
+}
+
+function toggleTheme() {
+  currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  localStorage.setItem('kf-theme', currentTheme);
+  applyTheme();
+}
+
+function applyTheme() {
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  document.getElementById('themeToggle').textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+}
+
+function toggleMobileMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+  document.getElementById('mobileOverlay').classList.toggle('open');
+  document.getElementById('hamburger').classList.toggle('open');
+}
+
+// Close mobile menu on link click
+document.querySelectorAll('#mobileMenu .nav-link').forEach(link => {
+  link.addEventListener('click', () => toggleMobileMenu());
+});
+document.getElementById('mobileOverlay').addEventListener('click', () => toggleMobileMenu());
+
+// Header scroll effect
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+  const header = document.getElementById('header');
+  const scrollY = window.scrollY;
+  if (scrollY > 50) {
+    header.classList.add('header-scrolled');
+  } else {
+    header.classList.remove('header-scrolled');
+  }
+  lastScroll = scrollY;
+});
+
+// Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// Intersection Observer for animations
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.fade-up, .fade-in, .scale-in').forEach(el => observer.observe(el));
+
+// Lightbox
+function openLightbox(src) {
+  document.getElementById('lightbox').classList.add('open');
+  document.getElementById('lightboxImg').src = src;
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox(e) {
+  if (e && e.target !== e.currentTarget) return;
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
+
+// Contact form
+function handleSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const name = form.name.value;
+  const phone = form.phone.value;
+  const email = form.email.value;
+  const message = form.message.value;
+  const whatsappMsg = `Hi K-Fitness! I'm ${name}. Phone: ${phone}, Email: ${email}. Message: ${message}`;
+  const url = `https://wa.me/212653122970?text=${encodeURIComponent(whatsappMsg)}`;
+  window.open(url, '_blank');
+}
+
+// Init
+applyTheme();
+applyLanguage(currentLang);
+</script>
+</body>
+</html>
