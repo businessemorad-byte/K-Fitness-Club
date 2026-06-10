@@ -180,23 +180,26 @@ header {
 
 /* Mobile Menu */
 .mobile-menu {
+  display: none;
   position: fixed;
-  top: 0;
-  right: -100%;
-  width: 300px;
-  height: 100vh;
+  top: 64px;
+  left: 0;
+  right: 0;
   background: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
   z-index: 999;
-  padding: 80px 24px 24px;
-  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border-left: 1px solid var(--border-color);
+  padding: 16px 24px 24px;
+  max-height: calc(100vh - 64px);
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
 }
 
-.mobile-menu.open { right: 0; }
+.mobile-menu.open { display: block; }
 
 .mobile-overlay {
   position: fixed;
   inset: 0;
+  top: 64px;
   background: rgba(0,0,0,0.5);
   z-index: 998;
   opacity: 0;
@@ -927,7 +930,9 @@ footer {
   .section { padding: 60px 0; }
   .desktop-nav { display: none; }
   .hamburger { display: flex; }
-  .header-actions { gap: 8px; }
+  .header-actions { gap: 6px; }
+  .header-actions .lang-switcher { gap: 2px; padding: 2px; }
+  .header-actions .lang-btn { padding: 4px 6px; font-size: 11px; }
   .hero h1 { font-size: 42px; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn-primary, .hero-actions .btn-secondary { width: 100%; justify-content: center; }
@@ -935,11 +940,9 @@ footer {
   .pricing-card.featured { transform: none; }
   .pricing-card.featured:hover { transform: translateY(-8px); }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-  .gallery-item.tall { grid-row: span 1; }
   .footer-grid { grid-template-columns: 1fr; gap: 24px; }
   .sticky-cta { display: flex; }
   footer { padding-bottom: 80px; }
-  .lang-switcher { display: none; }
 }
 
 @media (max-width: 480px) {
@@ -957,18 +960,18 @@ footer {
 
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
-  <nav class="flex flex-col gap-4">
-    <a href="#why-us" class="nav-link text-[15px] font-medium text-[var(--text-secondary)] hover:text-[var(--orange)] transition-all py-2" data-i18n="nav_why_us">Why Choose Us</a>
-    <a href="#plans" class="nav-link text-[15px] font-medium text-[var(--text-secondary)] hover:text-[var(--orange)] transition-all py-2" data-i18n="nav_plans">Plans</a>
-    <a href="#coaches" class="nav-link text-[15px] font-medium text-[var(--text-secondary)] hover:text-[var(--orange)] transition-all py-2" data-i18n="nav_coaches">Coaches</a>
-    <a href="#gallery" class="nav-link text-[15px] font-medium text-[var(--text-secondary)] hover:text-[var(--orange)] transition-all py-2" data-i18n="nav_gallery">Gallery</a>
-    <a href="#location" class="nav-link text-[15px] font-medium text-[var(--text-secondary)] hover:text-[var(--orange)] transition-all py-2" data-i18n="nav_location">Location</a>
-    <a href="#contact" class="nav-link text-[15px] font-medium text-[var(--text-secondary)] hover:text-[var(--orange)] transition-all py-2" data-i18n="nav_contact">Contact</a>
+  <nav class="flex flex-col">
+    <a href="#why-us" class="nav-link block text-[16px] font-medium py-3 px-2 text-[var(--text-secondary)] hover:text-[var(--orange)] border-b border-[var(--border-color)] transition-all" data-i18n="nav_why_us">Why Choose Us</a>
+    <a href="#plans" class="nav-link block text-[16px] font-medium py-3 px-2 text-[var(--text-secondary)] hover:text-[var(--orange)] border-b border-[var(--border-color)] transition-all" data-i18n="nav_plans">Plans</a>
+    <a href="#coaches" class="nav-link block text-[16px] font-medium py-3 px-2 text-[var(--text-secondary)] hover:text-[var(--orange)] border-b border-[var(--border-color)] transition-all" data-i18n="nav_coaches">Coaches</a>
+    <a href="#gallery" class="nav-link block text-[16px] font-medium py-3 px-2 text-[var(--text-secondary)] hover:text-[var(--orange)] border-b border-[var(--border-color)] transition-all" data-i18n="nav_gallery">Gallery</a>
+    <a href="#location" class="nav-link block text-[16px] font-medium py-3 px-2 text-[var(--text-secondary)] hover:text-[var(--orange)] border-b border-[var(--border-color)] transition-all" data-i18n="nav_location">Location</a>
+    <a href="#contact" class="nav-link block text-[16px] font-medium py-3 px-2 text-[var(--text-secondary)] hover:text-[var(--orange)] border-b border-[var(--border-color)] transition-all" data-i18n="nav_contact">Contact</a>
   </nav>
   <div class="mt-6 pt-6 border-t border-[var(--border-color)] flex gap-2">
-    <button onclick="setLanguage('en')" class="lang-btn flex-1 text-center" data-lang="en">EN</button>
-    <button onclick="setLanguage('fr')" class="lang-btn flex-1 text-center" data-lang="fr">FR</button>
-    <button onclick="setLanguage('ar')" class="lang-btn flex-1 text-center" data-lang="ar">AR</button>
+    <button onclick="setLanguage('en')" class="lang-btn flex-1 text-center py-2" data-lang="en">EN</button>
+    <button onclick="setLanguage('fr')" class="lang-btn flex-1 text-center py-2" data-lang="fr">FR</button>
+    <button onclick="setLanguage('ar')" class="lang-btn flex-1 text-center py-2" data-lang="ar">AR</button>
   </div>
 </div>
 
