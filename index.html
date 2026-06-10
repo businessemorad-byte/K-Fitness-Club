@@ -183,7 +183,7 @@ header {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.6);
-  z-index: 998;
+  z-index: 1001;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s ease;
@@ -198,7 +198,7 @@ header {
   width: min(320px, 85vw);
   height: 100vh;
   background: #0a0a0a;
-  z-index: 999;
+  z-index: 1002;
   padding: 24px 20px 20px;
   transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
@@ -1079,7 +1079,7 @@ footer {
 
 @media (max-width: 768px) {
   .section { padding: 60px 0; }
-  .desktop-nav { display: none; }
+  nav.desktop-nav { display: none; }
   .hamburger { display: flex; }
   .header-actions .lang-switcher { display: none; }
   .header-actions .theme-toggle { display: none; }
